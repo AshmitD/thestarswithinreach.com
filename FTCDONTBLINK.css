@@ -1,39 +1,6 @@
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: black;
- 
+.titl{
+  margin: 0 auto;
+  color: black;
+   font-family: Times New Roman;
+  font-size: 300px;
 }
-
-li {
-  float: right ;
-    text-align: center;
-   font-family: 'Cabin', sans-serif;
-}
-
-li a {
-  display: block;
-  color: #ffe100;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-    
-    height: 25px;
-}
-
-li a:hover:not(.active) {
-  background-color: #ffe100;
-    color: black;
-}
-
-.active {
-  background-color: black;
-}
-#logo {
-    width: 65px;
-
-
-}
-
