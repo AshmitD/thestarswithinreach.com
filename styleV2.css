@@ -1,7 +1,7 @@
-
 @charset "UTF-8";
 
 /*
+
 	Colors:
 	
 	Yellow: #F8E9A1;
@@ -9,6 +9,7 @@
 	Light-Blue: #A8D0E6;
 	Light-Dark-Blue: #374785;
 	Dark-Blue: #24305E;
+
 */
 
 * {
@@ -231,3 +232,4 @@ body {
 .rocket-image {
     height: 400px;
 }
+
