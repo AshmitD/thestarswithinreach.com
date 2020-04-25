@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 /*
-
 	Colors:
 	
 	Yellow: #F8E9A1;
@@ -9,7 +8,6 @@
 	Light-Blue: #A8D0E6;
 	Light-Dark-Blue: #374785;
 	Dark-Blue: #24305E;
-
 */
 
 * {
@@ -17,8 +15,6 @@
 	padding: 0;
 	box-sizing: border-box;
 	overflow-x: hidden;
-    overflow-y: hidden;
-    
 }
 
 body {
@@ -30,6 +26,12 @@ body {
 	width: 100vw;
 	background: #24305E;
 	overflow-y: hidden;
+    text-align: center;
+    background-image: url("/media/background.png");
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
 }
 
 .nav-main {
@@ -69,58 +71,107 @@ body {
     color: #f8e9a1;
 }
 
-
 @keyframes stretchy {
 	0% {letter-spacing: 0px;}
 	25% {letter-spacing: 1px;}
-	50% {letter-spacing: 4px;}
+	50% {letter-spacing: 2px;}
 	75% {letter-spacing: 1px;}
 	100% {letter-spacing: 0px;}
 }
 
+.home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: 2;
+}
+
+.home-content h1 {
+    margin: 20px auto;
+    color: #f76c6c;
+    font-size: 80px;
+    animation: stretchy 10s 2s linear infinite;
+    padding: 10px 20px;
+    background: #24305e;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+      border-right: .15em solid #f8e9a1; /* The typwriter cursor */
+      white-space: nowrap; /* Keeps the content on a single line */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@media only screen and (max-width: 800px) {
+    .home-content h1 {
+        margin: 20px auto;
+        color: #f76c6c;
+        font-size: 80px;
+        animation: stretchy 10s 2s linear infinite;
+        padding: 10px 20px;
+        background: #24305e;
+        width: 95vw;
+        white-space: pre-wrap;
+        border: none;
+    }
+}
+
+.home-content a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #f8e9a1;
+    width: 200px;
+    text-transform: uppercase;
+    border-radius: 40px;
+    position: relative;
+    margin: 20px auto;
+    font-size: 20px;
+    font-weight: 600;
+    color: #24305e;
+}
+
+.home-content a:hover {
+    transition: .4s all ease;
+    background: #f76c6c;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #f8e9a1; }
+}
+
 .rocket {
-	height: 400px;
-	width: 400px;
-	margin-top: 440px;
-	margin-left: 40px;
+    height: 15vw;
+    width: 15vw;
+    min-height: 200px;
+    min-width: 200px;
+    overflow-y: hidden;
+    background-image: url("/media/rocket.png");
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    position: absolute;
+    bottom: 20px;
+    left: 51%;
+    transform: translateX(-50%) rotate(-50deg);
+    animation: takeoff 4s 2s linear 1 forwards;
+    z-index: 4;
 }
 
-.stars1 {
-	position: absolute;
-	top: 45%;
-	left: 25%;
-	transform: translate(-50%, -50%);
-	width: 100vh;
+@keyframes takeoff {
+    0% {bottom: 20px;}
+    100% {bottom: 300%;}
 }
-
-.stars2 {
-	position: absolute;
-	top: 45%;
-	left: 80%;
-	transform: translate(-50%, -50%);
-	width: 100vh;
-}
-
-.lander-button {
-	color: #F8E9A1;
-	padding: 10px 20px;
-	text-decoration: none;
-	font-family: montserrat;
-	text-transform: uppercase;
-	font-weight: 600;
-	border: 2px solid #F8E9A1;
-	font-size: 18px;
-	background: #24305E;
-}
-
-.lander-button:hover {
-	background: #F8E9A1;
-	color: #374785;
-	transition: .4s all ease;
-}
-
-
-
 
 
 
@@ -131,21 +182,20 @@ body {
 
 .about {
 	width: 100vw;
-	height: 100vh;
+    min-height: 100vh;
 	background: #F8E9A1;
-	overflow-y: hidden;
-    text-align: center
+    text-align: center;
 }
 
 .about-content {
-	height: 27.5vh;
-	width: 55vw;
+	width: 65vw;
 	text-align: center;
 	margin-top: 7.5vh;
 	margin-left: auto;
     margin-right: auto;
     position: relative
 	overflow-y: hidden;
+    margin-bottom: 5vh;
 }
 
 .about-heading {
@@ -162,24 +212,14 @@ body {
 	color: #24305E;
 }
 
-.aarush {
+.about-pic {
 	height: 30vh;
 	width: 30vh;
 	background: white;
 	border-radius: 100%;
 	overflow: hidden;
     display: inline-block;
-    margin: 0 5vw;
-}
-
-.ashmit {
-	height: 30vh;
-	width: 30vh;
-	background: white;
-	border-radius: 100%;
-	overflow: hidden;
-    display: inline-block;
-    margin: 0 5vw;
+    margin: 5vw 5vw;
 }
 
 .about-image {
@@ -189,44 +229,135 @@ body {
 }
 
 
-.aar, .ash {
-    display: inline-block; 
-    color: #24305e;
-    position: absolute;
-    top: 82.5%;
-    transform: translate(-50%, -50%);
-}
-
-.aar {
-    left: 37.5%;
-}
-
-.ash {
-    left: calc(100% - 37.5%);
-}
-
 .rocket-about {
     transform: rotate(35deg);
     position: absolute;
     top: 70%;
-    left: -50%;
+    left: -550%;
     animation: move 4s linear 2s 1;
+    height: calc(15vw + 10vh);
+    overflow-y: hidden;
 }
 
 @keyframes move {
     0% {left: -50%;}
-    100% {left: 150%; top: 0%; transform: rotate(10deg);}
+    100% {left: 200%; top: 0%; transform: rotate(10deg);}
 }
 
 .rocket-image {
-    height: 400px;
-}
-.toTheRight {
-    display:inline;
+    height: calc(15vw + 10vh);
 }
 
-html {
-    background: #f76C6C;
+
+
+
+
+.blog {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #f8e9a1;
+    text-align: center;
+}
+
+.blog-box {
+    min-height: 500px;
+    width: 35vw;
+    min-width: 400px;
+    display: inline-block;
+    margin: 30px 5vw;
+    background: #24305e;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 40px;
+    padding: 20px;
+}
+
+.blog-heading {
+    font-family: Bebas Neue;
+    letter-spacing: 1.2px;
+    font-size: 40px;
+    margin-top: 2.5%;
+    color: #f76c6c;
+}
+
+.blog-content {
+    width: 80%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    color: #f8e9a1;
+    font-size: 20px;
+    margin-bottom: 2.5%;
+}
+
+.blog-link {
+    padding: 10px 20px;
+    background-color: #f76c6c;
+    color: #f8e9a1;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 100px;
+    position: relative;
+    margin: 5% auto;
+}
+
+.blog-link:hover {
+    color: #f76c6c;
+    background-color: #f8e9a1;
+    transition: .4s all ease;
+}
+
+.typeform-link {
+    padding: 10px 20px;
+    color: #f8e9a1;
+    background-color: #24305e;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 100px;
+    font-weight: 800;
+    font-size: 26px;
+    margin: 25%;
+}
+
+.typeform-link:hover {
+    background-color: #f8e9a1;
+    color: #24305e;
+    transition: .4s all ease;
+}
+
+.mission {
+    background: #f76c6c;
+    min-height: 100vh;
+    width: 100vw;
+    text-align: center;
+}
+
+.mission-content {
+	width: 65vw;
+	text-align: center;
+	margin-top: 7.5vh;
+	margin-left: auto;
+    margin-right: auto;
+    position: relative
+	overflow-y: hidden;
+    margin-bottom: 5vh;
+    padding: 40px;
+    background: rgba(248, 233, 161, 1);
+    border-radius: 40px;
+}
+
+.mission-heading {
+	font-size: 50px;
+	margin-bottom: 2.5vh;
+	font-family: Bebas Neue;
+	color: #24305E;
+	animation: stretchy 10s linear 2s infinite;
+}
+
+.mission-text {
+	font-family: overpass;
+	font-size: 20px;
+	color: #24305E;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
@@ -550,4 +681,8 @@ header h1{
     float: right;
     text-align: left;
   }
+}
+
+html {
+    background:  #F76C6C;
 }
