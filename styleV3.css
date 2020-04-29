@@ -1,3 +1,30 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@AshmitD 
+AshmitD
+/
+thestarswithinreach.com
+1
+00
+ Code
+ Issues 0
+ Pull requests 0 Actions
+ Projects 0
+ Wiki
+ Security 0
+ Insights
+ Settings
+thestarswithinreach.com/styleV3.css
+@AshmitD AshmitD Update and rename Partnership.css to styleV3.css
+885c27d 4 days ago
+688 lines (587 sloc)  12.1 KB
+  
 @charset "UTF-8";
 
 /*
@@ -347,11 +374,13 @@ body {
 }
 
 .mission-heading {
-	font-size: 50px;
+	font-size: 100px;
 	margin-bottom: 2.5vh;
 	font-family: Bebas Neue;
-	color: #24305E;
+	color: #F8E9A1;
 	animation: stretchy 10s linear 2s infinite;
+    font-weight: 100px;
+    margin-top: 20px;
 }
 
 .mission-text {
@@ -386,7 +415,7 @@ header h1{
   height: 35px;
   width: 60px;
   font-size: 22px;
-  background: #f0f0f0;
+  background: green;
   color: #3c3c3c;
   position: relative;
   margin-top: 15px;
@@ -451,7 +480,7 @@ header h1{
   width: 16px;
   height: 10px;
   position: absolute;
-  background: #00c4f3;
+  background:#F8E9A1;
   z-index: 5;
   left: 0;
   right: 0;
@@ -462,7 +491,7 @@ header h1{
 }
 
 .timeline .hexa:before {
-  border-bottom: 4px solid #00c4f3;
+  border-bottom: 4px solid #F8E9A1;
   border-left-width: 8px;
   border-right-width: 8px;
   top: -4px;
@@ -471,7 +500,7 @@ header h1{
 .timeline .hexa:after {
   border-left-width: 8px;
   border-right-width: 8px;
-  border-top: 4px solid #00c4f3;
+  border-top: 4px solid #F8E9A1;
   bottom: -4px;
 }
 
@@ -686,3 +715,71 @@ header h1{
 html {
     background:  #F76C6C;
 }
+
+.block {
+  display: inline-block;
+  width: 350px;
+  height: 200px;
+  background-color: #24305E;
+  margin-left: 25px;
+  margin-right: 25px;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.container  {  
+ text-align: center;
+ margin-top: 0px;
+ margin-left: 0px;
+ margin-right: 0px;
+}
+.mission-Title {
+    color:#F8E9A1;
+    font-weight: bold;
+    margin-top: 0px;
+    background: #374785;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;      
+    text-transform: uppercase;
+    font-size: 40px;
+}
+.icon {
+    align-self: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-top:15px;
+    font-size: 1.5em;
+    color: #F8E9A1;
+}
+
+.title-container {
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.mission-subheading {
+    font-size: 22px;
+}
+
+.line {
+    width: 35%;
+    margin-top: 0px;
+    height: 5px;
+  margin: 0 auto;
+    margin-top: 10px;
+    background: #374785;
+    border: 0px;
+    border-radius: 2px;
+}
+
+ #trapezoid {
+      border-bottom: 100px solid red;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      height: 0;
+      width: 100%;
+    }
+  
+
+
