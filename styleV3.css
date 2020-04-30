@@ -79,6 +79,7 @@ body {
 .nav-main-item-home:hover {
     color: #f76c6c;
 	transition: .4s all ease;
+
 }
 
 .nav-main-item-about:hover {
@@ -613,6 +614,7 @@ header h1{
     height: 0;
     clear: both;
     visibility: hidden;
+
   }
   
   .timeline .hexa {
@@ -726,6 +728,7 @@ html {
   height: auto;
   border-radius: 20px;
   margin-bottom: 20px;
+
 }
 .container  {  
  text-align: center;
@@ -773,13 +776,55 @@ html {
     border-radius: 2px;
 }
 
- #trapezoid {
-      border-bottom: 100px solid red;
-      border-left: 25px solid transparent;
-      border-right: 25px solid transparent;
-      height: 0;
-      width: 100%;
-    }
+
+
+.toscew {
+    background-color: #F8E9A1;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+  height: auto;
+    transform: skewY(4deg); 
+    -ms-transform: skewY(4deg);
+    -webkit-transform: skewY(4deg);
+    margin-top: 100px;
+    margin-bottom: 300px;
+}
+.timeline-container {
+    
+    margin-top: 750px;
+}
+.video {
+    border: solid 10px #F76C6C;
+    border-radius: 3px;
+    width: 50%;
+    height: 50VH;
+    transform: skewY(-4deg); 
+    -ms-transform: skewY(-4deg);
+    -webkit-transform: skewY(-4deg);
+    margin-top: 15px;
+    margin-bottom: 75px;
   
+}
+.video-heading {
+    font-size: 50px;
 
+	font-family: Bebas Neue;
+	color: #24305E;
+	
+    font-weight: 100px;
+    margin-top: 50px;
+      transform: skewY(-4deg); 
+    -ms-transform: skewY(-4deg);
+    -webkit-transform: skewY(-4deg);
+    margin-bottom: 0px;
+}
+.timeline-heading {
+    font-size: 50px;
+	margin-bottom: 50px;
+	font-family: Bebas Neue;
+	color: #F8E9A1;
+	text-align: center;
+    font-weight: 100px;
 
+}
