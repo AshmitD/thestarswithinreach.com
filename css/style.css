@@ -29,7 +29,7 @@ body {
 	background: #24305E;
 	overflow-y: hidden;
     text-align: center;
-    background-image: url("/media/background.jpg");
+    background-image: url("../media/background.jpg");
       /* Center and scale the image nicely */
       background-position: center;
       background-repeat: no-repeat;
