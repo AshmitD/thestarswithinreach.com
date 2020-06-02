@@ -154,6 +154,10 @@ a {
         white-space: pre-wrap;
         border: none;
     }
+	
+	.main-nav {
+		opacity: 0;
+	}
 }
 
 .home-content a {
@@ -440,8 +444,8 @@ a {
 }
 
 .blog-box-main {
-    height: 500px;
-    width: 500px;
+    min-height: 500px;
+    max-width: 500px;
     position: relative;
     margin: 2.5% auto;
     background: var(--redpink);
@@ -480,8 +484,8 @@ a {
 }
 
 .blog-box {
-    height: 500px;
-    width: 500px;
+    min-height: 500px;
+    max-width: 500px;
     position: relative;
     margin: 2.5% 5%;
     background: var(--yellow);
@@ -527,5 +531,5 @@ a {
 
 .contact-us div {
     height: 90vh;
-    width: 90vw;
+    max-width: 90vw;
 }
