@@ -12,6 +12,10 @@
     text-align: center;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: poppins;
     font-size: 18px;
@@ -51,11 +55,55 @@ a {
     background-attachment: fixed;
 }
 
+.hamburger {
+    position: fixed;
+    top: 70px;
+    left: 70px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 100000;
+}
+
+.hamburger i {
+    background: rgba(1, 0, 31, 0.5);
+    padding: 20px;
+    border-radius: 100%;
+    color: var(--yellow);
+    transition: .4s all ease;
+}
+
+.hamburger i:focus, .hamburger i:active, .hamburger i:hover {
+    background: var(--yellow);
+    color: rgba(1, 0, 31, 1);
+}
+
 .main-nav {
 	height: 10vh;
 	width: 100vw;
 	text-align: center;
 	overflow-y: hidden;
+    position: fixed;
+    z-index: 100000;
+    background: rgba(1, 0, 31, 0.5);
+}
+
+.main-nav.tog {
+    right: 0px;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1450px) {
+    .main-nav {
+        height: 100vh;
+        width: 300px;
+        right: -300px;
+        opacity: 0;
+        transition: .4s all ease-out;
+    }
+    
+    .hamburger {
+        opacity: 1;
+    }
 }
 
 .main-nav ul {
@@ -139,8 +187,8 @@ a {
       border-right: .15em solid var(--yellow); /* The typwriter cursor */
       white-space: nowrap; /* Keeps the content on a single line */
   animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+    typing 2.75s steps(40, end),
+    blink-caret .5s step-end infinite;
 }
 
 @media only screen and (max-width: 800px) {
@@ -154,10 +202,6 @@ a {
         white-space: pre-wrap;
         border: none;
     }
-	
-	.main-nav {
-		opacity: 0;
-	}
 }
 
 .home-content a {
@@ -165,7 +209,7 @@ a {
     text-decoration: none;
     padding: 10px 20px;
     background: var(--yellow);
-    width: 200px;
+    width: 300px;
     text-transform: uppercase;
     border-radius: 40px;
     position: relative;
@@ -222,6 +266,17 @@ a {
     min-height: 100vh;
 }
 
+@media screen only and (max-width: 800px) {
+    .about .over {
+        padding: 50px 20px;
+    }
+    
+    .about-pic {
+        height: 250px;
+        width: 250px;
+    }
+}
+
 .about-text {
     font-family: montserrat;
     margin-bottom: 40px;
@@ -251,10 +306,26 @@ a {
     position: relative;
     margin: 20px auto;
     border-radius: 100%;
-    background: url(/media/placeholder.png);
     background-size: contain;
     overflow: hidden;
     box-shadow: 0 0 30px 2px rgba(0, 0, 0, .5);
+}
+
+.aarush {
+    background: url(/media/aarush.jpg);
+    background-size: contain;
+}
+
+.ashmit {
+    background: url(/media/ashmit.jpg);
+    background-size: 600px auto;
+    background-position: -125px; 
+}
+
+.ananya {
+    background: url(/media/ananya.jpg);
+    background-size: 600px auto;
+    background-position: -150px -100px; 
 }
 
 .Iover {
@@ -304,6 +375,14 @@ a {
     padding: 50px calc(10vw + 30px);
 }
 
+@media screen only and (max-width: 800px) {
+    .mission .over-m {
+        padding: 50px 20px;
+    }
+    
+    
+}
+
 .over-m h1 {
     color: var(--yellow);
 }
@@ -337,6 +416,10 @@ a {
     .over-m .block {
         width: 90%;
         height: auto;
+    }
+    
+    .block {
+        margin: 40px 0; 
     }
 }
 
@@ -381,9 +464,20 @@ a {
     letter-spacing: 1px;
 }
 
+.num {
+    font-size: 100px; 
+    margin: 10px;
+}
+
 @media only screen and (max-width: 800px) {
     .box {
         width: 80%;
+        margin: 0;
+    }
+    
+    .num {
+        font-size: 60px; 
+        margin: 10px;
     }
 }
 
@@ -427,6 +521,17 @@ a {
     background-size: contain;
     box-shadow: 0 0 30px 2px rgba(0, 0, 0, .5);
     border-radius: 40px;
+}
+
+@media only screen and (max-width: 800px) {
+    .partnerships .over-p {
+        padding: 50px 20px;
+    }
+    
+    .partner div {
+        box-shadow: 0 0 0 0 transparent;
+        border-radius: 0%;
+    }
 }
 
 .journal {
@@ -532,4 +637,17 @@ a {
 .contact-us div {
     height: 90vh;
     max-width: 90vw;
+}
+
+.footer {
+    height: 40px;
+    background: var(--darkblue);
+    padding: 10px;
+    color: var(--yellow);
+    width: 100vw;
+}
+
+.footer p {
+    text-transform: uppercase;
+    font-size: 14px;
 }
