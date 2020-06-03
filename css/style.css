@@ -270,7 +270,7 @@ a {
 
 @media screen only and (max-width: 800px) {
     .about .over {
-        padding: 50px 20px;
+        padding: 50px 5px;
     }
     
     .about-pic {
@@ -381,7 +381,7 @@ a {
 
 @media screen only and (max-width: 800px) {
     .mission .over-m {
-        padding: 50px 20px;
+        padding: 50px 5px;
     }
     
     
@@ -529,7 +529,7 @@ a {
 
 @media only screen and (max-width: 800px) {
     .partnerships .over-p {
-        padding: 50px 20px;
+        padding: 50px 5px;
     }
     
     .partner div {
@@ -542,6 +542,12 @@ a {
     min-height: 100vh;
     background: var(--darkblue);
     padding: 50px;
+}
+
+@media only screen and (max-width: 800px) {
+	.journal {
+		padding: 50px 5px;
+	}
 }
 
 .journal {
