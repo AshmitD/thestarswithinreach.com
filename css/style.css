@@ -72,7 +72,7 @@ a {
     transition: .4s all ease;
 }
 
-.hamburger i:focus, .hamburger i:active, .hamburger i:hover {
+.hamburger i:hover {
     background: var(--yellow);
     color: rgba(1, 0, 31, 1);
 }
@@ -296,11 +296,28 @@ a {
     overflow: hidden;
 }
 
+@media only screen and (max-width: 1600px) {
+    .about .over {
+        padding: 50px 30px;
+    }
+    
+    .about-pic {
+        margin: 50px;
+    }
+    
+    .about-text {
+        width: 80%;
+        position: relative;
+        margin: 20px auto;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     .about-pic {
         margin: 5% auto;
-	height: 250px;
-	width: 250px;
+        height: 250px;
+        display: block;
+        width: 250px;
     }
 }
 
@@ -379,14 +396,6 @@ a {
     padding: 50px calc(10vw + 30px);
 }
 
-@media only screen and (max-width: 800px) {
-    .mission .over-m {
-        padding: 50px 5px;
-    }
-    
-    
-}
-
 .over-m h1 {
     color: var(--yellow);
 }
@@ -395,7 +404,7 @@ a {
     background-color: var(--yellow);
 }
 
-.over-m p {
+.mission .over-m p {
     font-family: poppins;
     color: var(--yellow);
     text-transform: uppercase;
@@ -403,6 +412,25 @@ a {
     margin-bottom: 20px;
     font-size: 24px;
 }
+
+@media only screen and (max-width: 1600px) {
+    .over-m {
+        padding: 50px 20px;
+    }
+    
+    .over-m p {
+        width: 90%;
+        position: relative;
+        margin: 0 auto 20px auto;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .mission .over-m {
+        padding: 50px 5px;
+    }    
+}
+
 
 .over-m .block {
     height: 400px;
@@ -471,6 +499,24 @@ a {
 .num {
     font-size: 100px; 
     margin: 10px;
+}
+
+@media only screen and (max-width: 1800px) {
+    .box {
+        margin: 0px
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .box {
+        margin: 0px;
+        width: 33%;
+    }  
+    
+    .num {
+        font-size: 60px; 
+        margin: 10px;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -560,7 +606,7 @@ a {
 
 .blog-box-main {
     min-height: 500px;
-    max-width: 500px;
+    max-width: 400px;
     position: relative;
     margin: 2.5% auto;
     background: var(--redpink);
